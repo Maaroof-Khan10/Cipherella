@@ -1,0 +1,394 @@
+/* Importing custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Oswald:wght@200..700&display=swap');
+
+/* Global Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    background-color: #1D1A21; /* Dark background for the body */
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    background: linear-gradient(45deg, #00C1FF, #00A98D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Icon styling inside h1 */
+h1 i {
+    margin-right: 10px;
+    font-size: 0.8em;
+    background: linear-gradient(45deg, #00C1FF, #00A98D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    vertical-align: middle;
+}
+
+/* Styling for list items and tab elements */
+li, div.tab {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FCF7FF;
+    text-decoration: none;
+}
+
+/* Header styling with spacing and alignment */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* Tabs styling */
+.tabs {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.tabs li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Tab individual items styling */
+.tab {
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Hover effect for tabs */
+.tab:hover {
+    background: linear-gradient(45deg, #D37D64, #F7B561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tab i {
+    margin-right: 10px;
+    font-size: 0.8em;
+    color: #FCF7FF;
+    vertical-align: middle;
+}
+
+.tab:hover i {
+    background: linear-gradient(45deg, #D37D64, #F7B561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Active tab styling */
+.active-tab {
+    background: linear-gradient(45deg, #D37D64, #F7B561) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.active-tab i {
+    background: linear-gradient(45deg, #D37D64, #F7B561) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none;
+}
+
+.active-content {
+    display: flex;
+    margin-left: 12%;
+    margin-right: 12%;
+    flex-direction: column;
+}
+
+.tab-content h2 {
+    background: linear-gradient(45deg, #F7B561, #F9F871, #00C9A6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 15px;
+}
+
+/* Input field styles */
+.inp {
+    background-color: #2A2A36;
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #FCF7FF;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    width: 100%;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.inp::placeholder {
+    color: #888;
+}
+
+/* Focus & Hover effects on inputs */
+.inp:focus {
+    border-color: #00C1FF;
+    background-color: #333;
+}
+
+.inp:hover {
+    border-color: #D37D64;
+    background-color: #333;
+}
+
+.inp:focus, .inp:hover {
+    border-radius: 10px;
+}
+
+/* Action buttons styling */
+.actButtons {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; 
+    width: 100%;
+    margin: 20px auto;
+}
+
+.actButtons button {
+    background-color: #00C1FF; 
+    border: 2px solid #00C1FF; 
+    border-radius: 8px; 
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+/* Hover effect for buttons */
+.actButtons button:hover {
+    background-color: #D37D64;
+    border-color: #D37D64;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.actButtons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 192, 255, 0.5);
+}
+
+/* File input styling */
+#content2 {
+    background-color: #2A2A36;
+    border-radius: 12px;
+    padding: 30px;
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    color: #FCF7FF;
+}
+
+#content2 h2 {
+    background: linear-gradient(45deg, #F7B561, #F9F871, #00C9A6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#fileInput {
+    background-color: #2A2A36;
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #FCF7FF;
+    font-size: 1rem;
+    padding: 12px 20px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#fileInput:hover {
+    border-color: #D37D64;
+}
+
+#fileInput:focus {
+    border-color: #00C1FF;
+    background-color: #333;
+}
+
+/* Key input styling */
+#keyInput {
+    background-color: #2A2A36;
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #FCF7FF;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    margin: 10px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#keyInput::placeholder {
+    color: #888;
+}
+
+#keyInput:focus {
+    border-color: #00C1FF;
+    background-color: #333;
+}
+
+/* Download link styling */
+#downloadLink {
+    display: inline-block;
+    margin-top: 20px;
+    color: #FCF7FF;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the download link */
+#downloadLink:hover {
+    background: linear-gradient(45deg, #FF6A00, #D37D64);
+    color: #1D1A21;
+    transform: translateY(-2px);
+}
+
+#downloadLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 192, 255, 0.5);
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Encrypting status animation */
+.encrypting {
+    font-size: 1.5em;
+    color: #00C1FF;
+    font-weight: bold;
+    display: inline-block;
+    padding: 20px;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+/* The rotating animation */
+.encrypting:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    border-top: 6px solid #00C1FF; /* Light blue for the spinning effect */
+    border-bottom: 6px solid #00C1FF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Glow animation for encrypting status */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 193, 255, 0.5), 0 0 20px rgba(0, 193, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 193, 255, 1), 0 0 25px rgba(0, 193, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 193, 255, 0.5), 0 0 20px rgba(0, 193, 255, 0.5);
+    }
+}
+
+/* FadeIn effect for results */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Result section styling */
+#result {
+    animation: fadeIn 1s ease-in-out;
+}
+
+#result {
+    font-size: 3em;
+    margin-top: 20px;
+    text-align: center;
+    color: #FCF7FF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Back button styling */
+#backButton {
+    margin: 20px auto; 
+    padding: 12px 30px;
+    background-color: #D37D64;
+    color: #FCF7FF;
+    border: 2px solid #D37D64;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    width: 25%;
+}
+
+/* Hover effect for the back button */
+#backButton:hover {
+    background-color: #F7B561;
+    border-color: #F7B561;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#backButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 192, 255, 0.5);
+}

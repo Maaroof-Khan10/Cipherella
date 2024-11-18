@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipherella | Text and Files Encryption Tool</title>
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-lock"></i> Cipherella</h1>
+        <nav>
+            <ul class="tabs">
+                <li>
+                    <div class="tab" id="tab1" onclick="showTab(1)">
+                        <i class="fas fa-file-alt"></i> Cipher for Text
+                    </div>
+                </li>
+                <li>
+                    <div class="tab" id="tab2" onclick="showTab(2)">
+                        <i class="fas fa-folder"></i> Cipher for Files
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Text encryption/decryption tab -->
+    <div id="content1" class="tab-content">
+        <h2>Enter Text to Encrypt or Decrypt</h2>
+        <input type="text" id="input" class="inp" placeholder="Enter Text">
+        <input type="text" id="keyword" class="inp" placeholder="Enter Keyword">
+        <div class="actButtons">
+            <button onclick="getInputValue(0)">Encrypt</button>
+            <button onclick="getInputValue(1)">Decrypt</button>
+        </div>
+        <div id="result"></div>
+        <button id="backButton" class="hidden" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- File encryption/decryption tab -->
+    <div id="content2" class="tab-content">
+        <h2>Upload a File to Encrypt or Decrypt</h2>
+        <form id="fileForm">
+            <input type="file" id="fileInput" name="file" accept="*/*" />
+            <input type="text" id="keyInput" placeholder="Enter Keyword"/>
+            <div class="actButtons">
+                <button type="button" onclick="encryptFile()">Encrypt File</button>
+                <button type="button" onclick="decryptFile()">Decrypt File</button>
+            </div>
+            <a id="downloadLink" style="display: none;" download>Download Encrypted File</a>
+        </form>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
